@@ -5,7 +5,8 @@
 /*** JavaScript til side med hjertets anatomi: forloop som kører gennem de forskellige navne på hjertets anatomi ***/
 /*******************************************************************************************************************/
 
-// VARIABLER
+// FORLOOP
+// Først skal der laves variabler:
 const kasse1 = document.getElementById("kasse1");
 const kasse2 = document.getElementById("kasse2");
 const kasse3 = document.getElementById("kasse3");
@@ -13,13 +14,13 @@ const kasse4 = document.getElementById("kasse4");
 const kasse5 = document.getElementById("kasse5");
 const kasse6 = document.getElementById("kasse6");
 
-// Opret et array med de tre ovenstående variable
+// Så skal der oprettes et array:
 const kasser = [kasse1, kasse2, kasse3, kasse4, kasse5, kasse6];
 
-/* Her kommer for-loopet!! */
+// Her starter selve for-loopet!!
 for(i = 0; i < kasser.length ;i++){
     kasser[i].style.animationName = "fadeIn";
-    // Man kan halvere tallet ved at dividere, og på den måde gøre delayet hurtigere:
+    // Tallet divideres med 2 for at gøre delayet hurtigere:
     kasser[i].style.animationDelay = i/2 + "s";
 }
 
